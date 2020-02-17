@@ -8,11 +8,43 @@
     <link rel="stylesheet" href="dist/main.css">
 </head>
 <body>
-    <div class="flex flex-col h-screen">
+    <div class="flex flex-col lg:h-screen">
 
-        <div class="w-full flex flex-grow h-full">
+        <div class="w-full flex flex-col lg:flex-row flex-grow h-full">
+            <!-- Right side box -->
+            <div class="flex flex-col lg:w-1/2 py-3 lg:order-1">
+                <div class="flex lg:w-2/3 mx-auto flex-col">
+                    <form action="" class="w-full items-start hidden lg:flex flex-row">
+                        <div class="flex-grow focus-within:border-blue-500 flex flex-wrap border-b-2 bg-gray-200 border-gray-600 px-2 pb-2">
+                            <label for="username" class="mb-1 focus-within:text-blue-500 font-normal text-xs">Username</label>
+                            <input type="text" class="text-gray-700 bg-transparent focus:outline-none w-full" id="username">
+                        </div>
+                        <div class="flex-grow mx-3">
+                            <div class="focus-within:border-blue-500 flex flex-wrap border-b-2 bg-gray-200 border-gray-600 px-2 pb-2">
+                                <label for="password" class="mb-1 focus-within:text-blue-500 font-normal text-xs">Password</label>
+                                <input type="text" class="text-gray-700 bg-transparent focus:outline-none w-full" id="password">
+                            </div>
+                            <a href="#0" class="text-xs text-blue-500 font-normal tracking-wider">Forgot password?</a>
+                        </div>
+                        <div class="flex-none mt-2">
+                            <button type="submit" class="border border-blue-500 rounded-full bg-transparent hover:bg-blue-500 hover:text-white py-2 px-3 cursor-pointer font-bold text-blue-500">Log in</button>
+                        </div>
+                    </form>
+
+                    <div class="mt-8 lg:mt-16 lg:w-4/5 mx-auto">
+                        <svg class="fill-current text-blue-500 w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 11H2a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h2V1h14v10a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zm0-2V5H2v4h2zm-2 8v-1h18v1l-4 2H6l-4-2z"/></svg>
+                        <h1 class="text-3xl text-gray-900 font-bold">See what’s happening in<br> the world right now</h1>
+                        <p class="mt-12 font-bold text-sm text-gray-900">Join Us today.</p>
+
+                        <a href="#0" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-full py-2 border border-blue-500 block text-center mt-2 font-bold">Sign up</a>
+                        <a href="#0" class="bg-transparent hover:bg-blue-600 text-blue-500 hover:text-white border border-blue-500 rounded-full w-full py-2 block text-center mt-2 font-bold">Login up</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Right side box -->
+
             <!-- Left side box -->
-            <div class="w-1/2 bg-blue-300 h-full flex justify-center items-center relative overflow-hidden">
+            <div class="lg:w-1/2 h-auto bg-blue-300 h-full flex justify-center items-center relative overflow-hidden mt-6 lg:mt-0 py-6 lg:py-0">
                 <ul class="list-none z-10">
                     <li class="text-white flex items-center mb-8">
                         <svg class="fill-current text-white inline-block h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
@@ -23,54 +55,24 @@
                         <div class="text-lg font-semibold">Hear what people are talking about.</div>
                     </li>
 
-                    <li class="text-white flex items-center mb-8">
+                    <li class="text-white flex items-center">
                         <svg class="fill-current text-white inline-block h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-4 4v-4H2a2 2 0 0 1-2-2V3c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-8zM5 7v2h2V7H5zm4 0v2h2V7H9zm4 0v2h2V7h-2z"/></svg>
                         <div class="text-lg font-semibold">Join the conversation.</div>
                     </li>
                 </ul>
 
                 <div class="absolute w-screen h-screen top-0 left-auto">
-                    <svg class="fill-current text-blue-500 -mr-64 -mt-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1z"/></svg>
+                    <svg class="fill-current text-blue-500 -mr-48 -mt-32 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1z"/></svg>
                 </div>
             </div>
             <!-- ./Left side box -->
 
-            <!-- Right side box -->
-            <div class="flex flex-col w-1/2 py-3">
-                <div class="flex w-2/3 mx-auto flex-col">
-                    <form action="" class="w-full items-start flex flex-row">
-                        <div class="flex-grow focus-within:border-blue-500 flex flex-wrap border-b-2 bg-gray-200 border-gray-600 px-2 pb-2">
-                            <label for="username" class="mb-1 focus-within:text-blue-500">Username</label>
-                            <input type="text" class="text-gray-700 bg-transparent focus:outline-none w-full" id="username">
-                        </div>
-                        <div class="flex-grow mx-3">
-                            <div class="focus-within:border-blue-500 flex flex-wrap border-b-2 bg-gray-200 border-gray-600 px-2 pb-2">
-                                <label for="password" class="mb-1 focus-within:text-blue-500">Password</label>
-                                <input type="text" class="text-gray-700 bg-transparent focus:outline-none w-full" id="password">
-                            </div>
-                            <a href="#0" class="text-xs text-blue-500 font-normal tracking-wider">Forgot password?</a>
-                        </div>
-                        <div class="flex-none mt-3">
-                            <button type="submit" class="border border-blue-500 rounded-full bg-transparent hover:bg-blue-500 hover:text-white py-2 px-3 cursor-pointer font-bold text-blue-500">Log in</button>
-                        </div>
-                    </form>
-
-                    <div class="mt-16 w-4/5 mx-auto">
-                        <svg class="fill-current text-blue-500 w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 11H2a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h2V1h14v10a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zm0-2V5H2v4h2zm-2 8v-1h18v1l-4 2H6l-4-2z"/></svg>
-                        <h1 class="text-3xl text-gray-900 font-bold">See what’s happening in<br> the world right now</h1>
-                        <p class="mt-12 font-bold text-sm text-gray-900">Join Us today.</p>
-
-                        <a href="#0" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-full py-2 block text-center mt-2 font-bold">Sign up</a>
-                        <a href="#0" class="bg-transparent hover:bg-blue-600 text-blue-500 hover:text-white border border-blue-500 rounded-full w-full py-2 block text-center mt-2 font-bold">Login up</a>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Right side box -->
+            
         </div>
 
         <!-- Footer -->
         <div class="w-full flex justify-center items-center h-auto mt-auto py-3">
-            <div>
+            <div class="flex justify-center lg:text-left px-3 lg:px-0 flex-wrap">
                 <a href="#0" class="mx-2 text-gray-600 font-normal text-sm hover:underline">About</a>
                 <a href="#0" class="mx-2 text-gray-600 font-normal text-sm hover:underline">Help center</a>
                 <a href="#0" class="mx-2 text-gray-600 font-normal text-sm hover:underline">Terms</a>
