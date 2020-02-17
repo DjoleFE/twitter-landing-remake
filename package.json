@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-landing",
+  "version": "1.0.0",
+  "description": "Twitter look a like landing page using tailwindcss",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwind build ./assets/style.css -o ./dist/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzoni404/tailwind-landing.git"
+  },
+  "author": "Djordje Todorovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzoni404/tailwind-landing/issues"
+  },
+  "homepage": "https://github.com/dzoni404/tailwind-landing#readme"
+}
